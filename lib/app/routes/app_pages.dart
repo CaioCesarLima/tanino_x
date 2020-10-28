@@ -23,7 +23,7 @@ part 'app_routes.dart';
 
 class AppPages {
   
-static const INITIAL = Routes.PROFESSIONALS;
+static const INITIAL = Routes.PROFESSIONAL_PERFIL;
 
   static final routes = [
     GetPage(
