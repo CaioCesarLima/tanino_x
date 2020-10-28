@@ -12,7 +12,6 @@ import 'package:tanino_x/app/modules/professional_perfil/views/professional_perf
 import 'package:tanino_x/app/modules/professional_perfil/bindings/professional_perfil_binding.dart';
 import 'package:tanino_x/app/modules/professionals/views/professionals_view.dart';
 import 'package:tanino_x/app/modules/professionals/bindings/professionals_binding.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:tanino_x/app/modules/signup/views/signup_view.dart';
 import 'package:tanino_x/app/modules/signup/bindings/signup_binding.dart';
 import 'package:tanino_x/app/modules/login/views/login_view.dart';
@@ -24,7 +23,7 @@ part 'app_routes.dart';
 
 class AppPages {
   
-static const INITIAL = Routes.SERVICES;
+static const INITIAL = Routes.PROFESSIONALS;
 
   static final routes = [
     GetPage(
