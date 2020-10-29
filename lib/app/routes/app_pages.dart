@@ -1,3 +1,5 @@
+import 'package:tanino_x/app/modules/menu/views/menu_view.dart';
+import 'package:tanino_x/app/modules/menu/bindings/menu_binding.dart';
 import 'package:tanino_x/app/modules/schedules/views/schedules_view.dart';
 import 'package:tanino_x/app/modules/schedules/bindings/schedules_binding.dart';
 import 'package:tanino_x/app/modules/contact/views/contact_view.dart';
@@ -77,6 +79,11 @@ static const INITIAL = Routes.SPECIALTIES;
       name: Routes.SCHEDULES, 
       page:()=> SchedulesView(), 
       binding: SchedulesBinding(),
+    ),
+    GetPage(
+      name: Routes.MENU, 
+      page:()=> MenuView(), 
+      binding: MenuBinding(),
     ),
   ];
 }

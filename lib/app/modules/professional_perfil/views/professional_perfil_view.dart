@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tanino_x/app/modules/menu/views/menu_view.dart';
 import 'package:tanino_x/app/modules/professional_perfil/controllers/professional_perfil_controller.dart';
 
 class ProfessionalPerfilView extends GetView<ProfessionalPerfilController> {
@@ -12,7 +13,7 @@ class ProfessionalPerfilView extends GetView<ProfessionalPerfilController> {
           title: Text('Profissional'),
           centerTitle: true,
         ),
-        drawer: Drawer(),
+        drawer: MenuView(),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

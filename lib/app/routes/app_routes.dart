@@ -13,4 +13,5 @@ abstract class Routes{
   static const SPECIALTIES = '/specialties';
   static const CONTACT = '/contact';
   static const SCHEDULES = '/schedules';
+  static const MENU = '/menu';
 }

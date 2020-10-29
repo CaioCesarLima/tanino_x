@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tanino_x/app/modules/menu/views/menu_view.dart';
 import 'package:tanino_x/app/modules/specialties/controllers/specialties_controller.dart';
 
 class SpecialtiesView extends GetView<SpecialtiesController> {
@@ -12,7 +13,7 @@ class SpecialtiesView extends GetView<SpecialtiesController> {
           title: Text('Especialidade'),
           centerTitle: true,
         ),
-        drawer: Drawer(),
+        drawer: MenuView(),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
