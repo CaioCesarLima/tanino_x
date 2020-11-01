@@ -64,9 +64,9 @@ class MenuView extends GetView<MenuController> {
                   menuItem(
                       controller.page.value == 3 ? true : false, "Fidalidade", 3, navegation: ()=> Get.toNamed(Routes.FIDELITY)),
                   menuItem(
-                      controller.page.value == 4 ? true : false, "Contato", 4, navegation: ()=> Get.toNamed(Routes.CONTACT)),
-                  menuItem(
                       controller.page.value == 5 ? true : false, "Serviços", 5, navegation: ()=> Get.toNamed(Routes.SERVICES)),
+                  menuItem(
+                      controller.page.value == 4 ? true : false, "Contato", 4, navegation: ()=> Get.toNamed(Routes.CONTACT)),
                 ],
               ))
         ],

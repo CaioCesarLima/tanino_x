@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tanino_x/app/modules/menu/views/menu_view.dart';
 import 'package:tanino_x/app/modules/professional_perfil/controllers/professional_perfil_controller.dart';
+import 'package:tanino_x/app/routes/app_pages.dart';
 
 class ProfessionalPerfilView extends GetView<ProfessionalPerfilController> {
   @override
@@ -31,10 +32,13 @@ class ProfessionalPerfilView extends GetView<ProfessionalPerfilController> {
             CircleAvatar(
               radius: 83,
               backgroundColor: Colors.black,
-              child: CircleAvatar(
-                radius: 80,
-                backgroundImage: NetworkImage(
-                  'https://i0.wp.com/portalovertube.com/wp-content/uploads/2018/12/Rodrigo-Hilbert.jpg',
+              child: Hero(
+                tag: 'Caio 1',
+                child: CircleAvatar(
+                  radius: 80,
+                  backgroundImage: NetworkImage(
+                    'https://i0.wp.com/portalovertube.com/wp-content/uploads/2018/12/Rodrigo-Hilbert.jpg',
+                  ),
                 ),
               ),
             ),
@@ -80,37 +84,41 @@ class ProfessionalPerfilView extends GetView<ProfessionalPerfilController> {
   }
 
   Widget itemListProfissionalSpeciality() {
-    return Container(
-      padding: EdgeInsets.all(5),
-      margin: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-      decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(15)),
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 5,
-              horizontal: 15,
+    return InkWell(
+      onTap: ()=> Get.toNamed(Routes.SPECIALTIES),
+          child: Container(
+        padding: EdgeInsets.all(5),
+        margin: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(15)),
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 15,
+              ),
+              child: Icon(
+                Icons.settings_remote,
+                size: 30,
+                color: Colors.cyan,
+              ),
             ),
-            child: Icon(
-              Icons.settings_remote,
-              size: 30,
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Corte Máquina",
+                    style: GoogleFonts.roboto(
+                        fontSize: 20, fontWeight: FontWeight.bold)),
+              ),
+            ),
+            Icon(
+              Icons.navigate_next,
               color: Colors.cyan,
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("Corte Máquina",
-                  style: GoogleFonts.roboto(
-                      fontSize: 20, fontWeight: FontWeight.bold)),
-            ),
-          ),
-          Icon(Icons.navigate_next,
-          color: Colors.cyan,
-          size: 40,
-          )
-        ],
+              size: 40,
+            )
+          ],
+        ),
       ),
     );
   }

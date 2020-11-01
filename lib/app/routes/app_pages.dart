@@ -32,6 +32,7 @@ static const INITIAL = Routes.SPECIALTIES;
       name: Routes.HOME, 
       page:()=> HomeView(), 
       binding: HomeBinding(),
+      transition: Transition.noTransition
     ),
     GetPage(
       name: Routes.LOGIN, 
@@ -49,36 +50,43 @@ static const INITIAL = Routes.SPECIALTIES;
       name: Routes.PROFESSIONALS, 
       page:()=> ProfessionalsView(), 
       binding: ProfessionalsBinding(),
+      transition: Transition.noTransition
     ),
     GetPage(
       name: Routes.PROFESSIONAL_PERFIL, 
       page:()=> ProfessionalPerfilView(), 
       binding: ProfessionalPerfilBinding(),
+      transition: Transition.noTransition
     ),
     GetPage(
       name: Routes.FIDELITY, 
       page:()=> FidelityView(), 
       binding: FidelityBinding(),
+      transition: Transition.noTransition
     ),
     GetPage(
       name: Routes.SERVICES, 
       page:()=> ServicesView(), 
       binding: ServicesBinding(),
+      transition: Transition.noTransition
     ),
     GetPage(
       name: Routes.SPECIALTIES, 
       page:()=> SpecialtiesView(), 
       binding: SpecialtiesBinding(),
+      transition: Transition.noTransition
     ),
     GetPage(
       name: Routes.CONTACT, 
       page:()=> ContactView(), 
       binding: ContactBinding(),
+      transition: Transition.noTransition
     ),
     GetPage(
       name: Routes.SCHEDULES, 
       page:()=> SchedulesView(), 
       binding: SchedulesBinding(),
+      transition: Transition.noTransition
     ),
     GetPage(
       name: Routes.MENU, 
