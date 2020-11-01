@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tanino_x/app/modules/contact/controllers/contact_controller.dart';
+import 'package:tanino_x/app/modules/menu/views/menu_view.dart';
 
 class ContactView extends GetView<ContactController> {
   @override
@@ -13,7 +14,7 @@ class ContactView extends GetView<ContactController> {
           title: Text('Contato'),
           centerTitle: true,
         ),
-        drawer: Drawer(),
+        drawer: MenuView(),
         body: Padding(
           padding: const EdgeInsets.only(top: 40),
           child: Column(

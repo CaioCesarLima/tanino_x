@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tanino_x/app/modules/menu/controllers/menu_controller.dart';
+import 'package:tanino_x/app/routes/app_pages.dart';
 
 class MenuView extends GetView<MenuController> {
   @override
@@ -57,15 +58,15 @@ class MenuView extends GetView<MenuController> {
           Obx(() => Column(
                 children: [
                   menuItem(
-                      controller.page.value == 1 ? true : false, "Home", 1),
+                      controller.page.value == 1 ? true : false, "Home", 1, navegation: ()=> Get.toNamed(Routes.HOME)),
                   menuItem(
-                      controller.page.value == 2 ? true : false, "Profissionais", 2),
+                      controller.page.value == 2 ? true : false, "Profissionais", 2, navegation: ()=> Get.toNamed(Routes.PROFESSIONALS)),
                   menuItem(
-                      controller.page.value == 3 ? true : false, "Fidalidade", 3),
+                      controller.page.value == 3 ? true : false, "Fidalidade", 3, navegation: ()=> Get.toNamed(Routes.FIDELITY)),
                   menuItem(
-                      controller.page.value == 4 ? true : false, "Contato", 4),
+                      controller.page.value == 4 ? true : false, "Contato", 4, navegation: ()=> Get.toNamed(Routes.CONTACT)),
                   menuItem(
-                      controller.page.value == 5 ? true : false, "Serviços", 5),
+                      controller.page.value == 5 ? true : false, "Serviços", 5, navegation: ()=> Get.toNamed(Routes.SERVICES)),
                 ],
               ))
         ],
@@ -73,10 +74,11 @@ class MenuView extends GetView<MenuController> {
     );
   }
 
-  Widget menuItem(bool active, String title, int numberPage) {
+  Widget menuItem(bool active, String title, int numberPage, {Function navegation}) {
     return InkWell(
       onTap: () {
         controller.navegar(numberPage);
+        navegation();
       },
       child: AnimatedContainer(
         duration: Duration(milliseconds: 100),

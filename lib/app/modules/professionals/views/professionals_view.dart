@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tanino_x/app/modules/menu/views/menu_view.dart';
 import 'package:tanino_x/app/modules/professionals/controllers/professionals_controller.dart';
 
 class ProfessionalsView extends GetView<ProfessionalsController> {
@@ -12,7 +13,7 @@ class ProfessionalsView extends GetView<ProfessionalsController> {
           title: Text('Profissionais'),
           centerTitle: true,
         ),
-        drawer: Drawer(),
+        drawer: MenuView(),
         body: ListView.builder(
             itemCount: 10,
             itemBuilder: (context, index) {

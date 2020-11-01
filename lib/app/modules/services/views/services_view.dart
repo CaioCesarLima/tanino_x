@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tanino_x/app/modules/menu/views/menu_view.dart';
 import 'package:tanino_x/app/modules/services/controllers/services_controller.dart';
 
 class ServicesView extends GetView<ServicesController> {
@@ -13,7 +14,7 @@ class ServicesView extends GetView<ServicesController> {
         title: Text('Serviços'),
         centerTitle: true,
       ),
-      drawer: Drawer(),
+      drawer: MenuView(),
       body: ListView.builder(
         itemCount: 20,
         itemBuilder: (context, index) {

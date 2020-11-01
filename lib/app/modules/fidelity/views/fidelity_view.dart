@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart'; 
 import 'package:tanino_x/app/modules/fidelity/controllers/fidelity_controller.dart';
+import 'package:tanino_x/app/modules/menu/views/menu_view.dart';
 
 class FidelityView extends GetView<FidelityController> {
   @override
@@ -10,6 +11,7 @@ class FidelityView extends GetView<FidelityController> {
         title: Text('FidelityView'),
         centerTitle: true,
       ),
+      drawer: MenuView(),
       body: Center(
         child: Text(
           'FidelityView is working', 

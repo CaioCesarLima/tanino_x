@@ -16,6 +16,6 @@ class MenuController extends GetxController {
 
   void navegar(int pagedestiny){
     page.value = pagedestiny;
-    print(page.value);
+    Get.back();
   }
 }
